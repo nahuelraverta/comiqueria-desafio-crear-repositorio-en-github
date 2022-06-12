@@ -1,0 +1,430 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.grilla {
+    background-color: grey;
+    display: grid;
+    grid-template-columns: [n] 1fr 1.1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.6fr 1fr 1fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav nav nav nav"
+        ". seccionPrincipal seccionPrincipal ."
+        ". seccionPrincipal seccionPrincipal ."
+        ". seccionPrincipal seccionPrincipal ."
+        "footer footer footer footer";
+}
+
+/* navegador/header */
+
+.nav {
+    width: 100%;
+    display: flex;
+    grid-area: nav;
+    background-color: #4E5169;
+    justify-content: space-evenly;
+    max-width:none;
+   
+}
+
+/* LOGO PRINCIPAL */
+
+.logo {
+    display: flex;
+    margin: 1px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    width: auto;
+    height: 100px;
+    margin: auto;
+
+}
+
+/* BOTONES del NAVEGADOR */
+
+.flexPadre {
+    list-style: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    margin: 20px;
+
+}
+
+.flexPadre a {
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1);
+    background: #0074c7;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+/* SLIDE DE FOTOS */
+
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 15s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+/* MAIN */
+/* seccion principal */
+
+.seccionPrincipal {
+    grid-area: seccionPrincipal;
+    background-color: grey;
+}
+
+.articulo p {
+    color: beige;
+}
+
+.negrita {
+    color: black;
+    background-color: white;
+}
+
+.articulo img {
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+
+}
+
+.articulo {
+    text-align: center;
+}
+
+.articulo a {
+    color: white;
+    text-decoration: none;
+    font-style: oblique;
+}
+
+.titulares {
+    padding: 10px;
+}
+
+/* video de youtube */
+
+.videoYT {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videoYT::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 55%;
+}
+
+.dimension {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* PIE DE PAGINA */
+
+.footer {
+    background-color: #585a67;
+    grid-area: footer;
+    color: white;
+}
+
+.footer {
+    width: auto fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.container-footer-all {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.container-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna1 {
+    max-width: 400px;
+}
+
+.columna1 h1 {
+    font-size: 22px;
+}
+
+.columna1 p {
+    font-size: 14px;
+    color: #c7c7c7;
+    margin-top: 20px;
+}
+
+.columna2 {
+    max-width: 400px;
+
+}
+
+.columna2 h1 {
+    font-size: 22px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img {
+    width: 36px;
+    height: 36px;
+}
+
+.row label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #c7c7c7;
+}
+
+.columna3 {
+    max-width: 400px;
+}
+
+.columna3 h1 {
+    font-size: 22px;
+}
+
+
+.row2 {
+    margin-top: 20px;
+}
+
+.row2 img {
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label {
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+
+
+
+
+/* .container-footer {
+    grid-area: footer;
+    width: 100%;
+    padding: 10px;
+    background: #101010;
+    display: flex;
+    justify-content: space-between;} */
+
+
+
+
+/* .copyright {
+    color: #c7c7c7;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-weight: bold;
+}
+
+.information {
+    text-decoration: none;
+    color: #c7c7c7;
+} */
+
+
+
+/* HOJA CONTACTO */
+
+form {
+    width: 450px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+
+}
+
+h2 {
+    color: #c7c7c7;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background: #4E5169;
+    color: #c7c7c7;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+    background: #0074c7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .grilla {
+        grid-template-areas:
+            "nav nav nav nav"
+            ". seccionPrincipal seccionPrincipal ."
+            ". seccionPrincipal seccionPrincipal ."
+            ". seccionPrincipal seccionPrincipal ."
+            "footer footer footer footer";
+    }
+
+    .nav {
+        background-color: rebeccapurple
+    }
+
+    .flexPadre {
+        flex-wrap: wrap;
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .footer {
+        background-color: rebeccapurple;
+    }
+
+    .container-body {
+        flex-wrap: wrap;
+    }
+
+    .columna2,
+    .columna3 {
+        margin-top: 40px;
+    }
+}
+
+/* responsive de contacto */
+
+@media (max-width:1100px) {
+    form {
+        width: 100%;
+    }
+}
