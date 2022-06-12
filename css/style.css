@@ -405,26 +405,3 @@ textarea {
 
 
 
-@media screen and (max-width: 1100px) {
-
-    .footer {
-        background-color: rebeccapurple;
-    }
-
-    .container-body {
-        flex-wrap: wrap;
-    }
-
-    .columna2,
-    .columna3 {
-        margin-top: 40px;
-    }
-}
-
-/* responsive de contacto */
-
-@media (max-width:1100px) {
-    form {
-        width: 100%;
-    }
-}
